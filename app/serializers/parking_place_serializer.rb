@@ -9,6 +9,11 @@
 #  longitude   :float
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
+#  address_one :string
+#  address_two :string
+#  zip_code    :string
+#  city        :string
+#  country     :string
 #
 
 class ParkingPlaceSerializer < ActiveModel::Serializer

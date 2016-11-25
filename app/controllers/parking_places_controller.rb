@@ -3,9 +3,11 @@ class ParkingPlacesController < InheritedResources::Base
   def index
     return render status: :bad_request, json: {message: "Missing required param 'latitude'."} if params[:latitude].blank?
     return render status: :bad_request, json: {message: "Missing required param 'longitude'."} if params[:longitude].blank?
+    range = params[:range].blank? ? 10000 : params[:range]
 
-
-    parking_places = ParkingPlace.paginate(:page => params[:page], :per_page => params[:per_page]).order(params[:order] || 'created_at ASC')
+    parking_places = ParkingPlace
+                         .near([params[:latitude], params[:longitude]], range, :units => :km)
+                         .paginate(:page => params[:page], :per_page => params[:per_page])
     render json: parking_places
   end
 

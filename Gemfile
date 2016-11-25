@@ -20,6 +20,7 @@ gem 'dotenv-rails', '~> 2.1'
 gem 'rack-cors', '~> 0.4'
 gem 'geocoder', '~> 1.4'
 gem 'will_paginate', '3.1.5'
+gem 'country_select'
 
 
 group :development, :test do
