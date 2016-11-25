@@ -19,6 +19,7 @@ gem 'active_model_serializers', '~> 0.10.0'
 gem 'dotenv-rails', '~> 2.1'
 gem 'rack-cors', '~> 0.4'
 gem 'geocoder', '~> 1.4'
+gem 'will_paginate', '3.1.5'
 
 
 group :development, :test do
