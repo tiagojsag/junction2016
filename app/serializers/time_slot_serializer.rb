@@ -13,5 +13,5 @@
 #
 
 class TimeSlotSerializer < ActiveModel::Serializer
-  attributes :id, :start_time, :end_time, :price_hour, :price_day
+  attributes :id
 end

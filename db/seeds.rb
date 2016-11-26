@@ -1,7 +1,5 @@
-AdminUser.delete_all
 ParkingPlace.delete_all
 TimeSlot.delete_all
-AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 
 
 def rand_time(from, to)

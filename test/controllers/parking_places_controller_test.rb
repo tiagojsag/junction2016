@@ -17,7 +17,7 @@ class ParkingPlacesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create parking_place" do
     assert_difference('ParkingPlace.count') do
-      post parking_places_url, params: { parking_place: { description: @parking_place.description, latitude: @parking_place.latitude, longitude: @parking_place.longitude, title: @parking_place.title } }
+      post parking_places_url, params: { parking_place: {  } }
     end
 
     assert_redirected_to parking_place_url(ParkingPlace.last)
@@ -34,7 +34,7 @@ class ParkingPlacesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update parking_place" do
-    patch parking_place_url(@parking_place), params: { parking_place: { description: @parking_place.description, latitude: @parking_place.latitude, longitude: @parking_place.longitude, title: @parking_place.title } }
+    patch parking_place_url(@parking_place), params: { parking_place: {  } }
     assert_redirected_to parking_place_url(@parking_place)
   end
 

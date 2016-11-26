@@ -12,5 +12,5 @@
 #
 
 class ReservationSerializer < ActiveModel::Serializer
-  attributes :id, :start, :end, :price
+  attributes :id
 end

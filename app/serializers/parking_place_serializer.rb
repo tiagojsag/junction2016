@@ -17,5 +17,5 @@
 #
 
 class ParkingPlaceSerializer < ActiveModel::Serializer
-  attributes :id, :title, :description, :latitude, :longitude
+  attributes :id
 end

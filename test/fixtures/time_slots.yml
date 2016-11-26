@@ -14,12 +14,12 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  start: 2016-11-25 20:42:43
-  end: 2016-11-25 20:42:43
-  price: 1.5
-
-two:
-  start: 2016-11-25 20:42:43
-  end: 2016-11-25 20:42:43
-  price: 1.5
+# This model initially had no columns defined. If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one: {}
+# column: value
+#
+two: {}
+# column: value
