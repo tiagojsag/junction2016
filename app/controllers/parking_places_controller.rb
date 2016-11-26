@@ -21,58 +21,37 @@ class ParkingPlacesController < ApplicationController
     render json: time_slots, each_serializer: TimeSlotIndexSerializer
   end
 
-  # GET /parking_places/1
-  # GET /parking_places/1.json
+  # GET /paring_places/1
+  # GET /paring_places/1.json
   def show
   end
 
-  # GET /parking_places/new
-  def new
-    @parking_place = ParkingPlace.new
-  end
-
-  # GET /parking_places/1/edit
-  def edit
-  end
-
-  # POST /parking_places
-  # POST /parking_places.json
+  # POST /paring_places
+  # POST /paring_places.json
   def create
-    @parking_place = ParkingPlace.new(parking_place_params)
+    @paring_place = ParingPlace.new(paring_place_params)
 
-    respond_to do |format|
-      if @parking_place.save
-        format.html { redirect_to @parking_place, notice: 'Parking place was successfully created.' }
-        format.json { render :show, status: :created, location: @parking_place }
-      else
-        format.html { render :new }
-        format.json { render json: @parking_place.errors, status: :unprocessable_entity }
-      end
+    if @paring_place.save
+      render :show, status: :created, location: @paring_place
+    else
+      render json: @paring_place.errors, status: :unprocessable_entity
     end
   end
 
-  # PATCH/PUT /parking_places/1
-  # PATCH/PUT /parking_places/1.json
+  # PATCH/PUT /paring_places/1
+  # PATCH/PUT /paring_places/1.json
   def update
-    respond_to do |format|
-      if @parking_place.update(parking_place_params)
-        format.html { redirect_to @parking_place, notice: 'Parking place was successfully updated.' }
-        format.json { render :show, status: :ok, location: @parking_place }
-      else
-        format.html { render :edit }
-        format.json { render json: @parking_place.errors, status: :unprocessable_entity }
-      end
+    if @paring_place.update(paring_place_params)
+      render :show, status: :ok, location: @paring_place
+    else
+      render json: @paring_place.errors, status: :unprocessable_entity
     end
   end
 
-  # DELETE /parking_places/1
-  # DELETE /parking_places/1.json
+  # DELETE /paring_places/1
+  # DELETE /paring_places/1.json
   def destroy
-    @parking_place.destroy
-    respond_to do |format|
-      format.html { redirect_to parking_places_url, notice: 'Parking place was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    @paring_place.destroy
   end
 
   private

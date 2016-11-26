@@ -41,13 +41,13 @@ class TimeSlotsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_time_slot
-      @time_slot = TimeSlot.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_time_slot
+    @time_slot = TimeSlot.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def time_slot_params
-      params.fetch(:time_slot, {})
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def time_slot_params
+    params.fetch(:time_slot, {})
+  end
 end
