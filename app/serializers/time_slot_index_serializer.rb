@@ -13,7 +13,9 @@
 #
 
 class TimeSlotIndexSerializer < ActiveModel::Serializer
-  attributes :id, :start_time, :end_time, :price_hour, :price_day
+  attributes :id, :start_time, :end_time, :price_hour, :price_day, :parking_place
 
-  belongs_to :parking_place
+  def parking_place
+    ParkingPlaceIndexSerializer.new(object.parking_place, scope: scope, root: false)
+  end
 end

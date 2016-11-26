@@ -17,8 +17,5 @@
 #
 
 class ParkingPlaceIndexSerializer < ActiveModel::Serializer
-  attributes :id, :title, :description, :latitude, :longitude, :time_slots
-
-  # has_many :time_slots
-
+  attributes :id, :title, :description, :latitude, :longitude
 end
