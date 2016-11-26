@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  mount_devise_token_auth_for 'User', at: 'auth'
+  resources :reservations
   resources :time_slots
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

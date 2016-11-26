@@ -12,8 +12,14 @@
 #  updated_at       :datetime         not null
 #
 
-class TimeSlotIndexSerializer < ActiveModel::Serializer
-  attributes :id, :start_time, :end_time, :price_hour, :price_day
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-  belongs_to :parking_place
-end
+one:
+  start: 2016-11-25 20:42:43
+  end: 2016-11-25 20:42:43
+  price: 1.5
+
+two:
+  start: 2016-11-25 20:42:43
+  end: 2016-11-25 20:42:43
+  price: 1.5

@@ -12,8 +12,7 @@
 #  updated_at       :datetime         not null
 #
 
-class TimeSlotIndexSerializer < ActiveModel::Serializer
-  attributes :id, :start_time, :end_time, :price_hour, :price_day
-
+class TimeSlot < ApplicationRecord
   belongs_to :parking_place
+
 end

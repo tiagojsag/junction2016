@@ -1,0 +1,24 @@
+# == Schema Information
+#
+# Table name: reservations
+#
+#  id           :integer          not null, primary key
+#  start        :datetime
+#  end          :datetime
+#  price        :float
+#  time_slot_id :integer
+#  created_at   :datetime         not null
+#  updated_at   :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start: 2016-11-26 12:03:13
+  end: 2016-11-26 12:03:13
+  price: 1.5
+
+two:
+  start: 2016-11-26 12:03:13
+  end: 2016-11-26 12:03:13
+  price: 1.5
