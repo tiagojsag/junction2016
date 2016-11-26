@@ -17,6 +17,8 @@
 #
 
 class ParkingPlace < ApplicationRecord
+  has_many :time_slots
+
   geocoded_by :full_street_address   # can also be an IP address
   after_validation :geocode, if: ->(obj){ obj.full_street_address.present? and obj.full_street_address_changed? }
 

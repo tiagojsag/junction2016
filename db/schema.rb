@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161125185301) do
+ActiveRecord::Schema.define(version: 20161125194243) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,17 @@ ActiveRecord::Schema.define(version: 20161125185301) do
     t.string   "zip_code"
     t.string   "city"
     t.string   "country"
+  end
+
+  create_table "time_slots", force: :cascade do |t|
+    t.integer  "parking_place_id"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.float    "price_hour"
+    t.float    "price_day"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["parking_place_id"], name: "index_time_slots_on_parking_place_id", using: :btree
   end
 
 end
