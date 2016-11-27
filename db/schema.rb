@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(version: 20161126115112) do
   end
 
   create_table "reservations", force: :cascade do |t|
-    t.datetime "start"
-    t.datetime "end"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.float    "price"
     t.integer  "time_slot_id"
     t.datetime "created_at",   null: false

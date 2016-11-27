@@ -48,6 +48,11 @@ class ReservationsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def reservation_params
-    params.fetch(:reservation, {})
+    result = params.permit(:time_slot, :time_slot_id, :start_time, :end_time, :price)
+
+    result[:start_date] = DateTime.strptime(result[:start_date],'%s') if result[:start_date].present?
+    result[:end_date] = DateTime.strptime(result[:end_date],'%s') if result[:end_date].present?
+
+    result
   end
 end
